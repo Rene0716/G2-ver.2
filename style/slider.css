@@ -1,0 +1,24 @@
+.card_slider {
+  width: 95%;
+  margin:auto;
+  background-position: center top;  
+}
+  /* background-color: #ccc;
+} */
+
+.carousel-wrap {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+
+.owl-next {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
