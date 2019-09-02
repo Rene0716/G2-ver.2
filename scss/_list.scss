@@ -1,6 +1,7 @@
 .filter_group {
     width: 100%;
     padding: 30px;
+    margin-top:10px;
     @include media(lg) {
         background-image: url('../img/prod/filter_bg.png');
         background-repeat: no-repeat;

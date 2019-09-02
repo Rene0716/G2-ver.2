@@ -57,6 +57,7 @@
                             width: 90%;
                         }
                     }
+// ----------------------新增的部分-----------------------------
                     @keyframes championRotate {
                         0%{transform: rotate(10deg);}
                         25%{transform: rotate(5deg);}
@@ -76,5 +77,5 @@ canvas{
     margin:auto;
     position:relative;
     z-index:-1;
-    background-color:rgba(255,255,255,.8);
+    background-color:rgba(255,255,255,0);
 }
