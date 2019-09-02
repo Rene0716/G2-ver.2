@@ -52,18 +52,18 @@
                     img {
                         margin: auto;
                         width: 80%;
-                        animation: championRotate .3s 10;
+                        animation: championRotate .5s 10;
                         @include media(lg) {
                             width: 90%;
                         }
                     }
 // ----------------------新增的部分-----------------------------
                     @keyframes championRotate {
-                        0%{transform: rotate(10deg);}
+                        0%{transform: rotate(8deg);}
                         25%{transform: rotate(5deg);}
                         50%{transform: rotate(0deg);}
                         75%{transform: rotate(-5deg);}
-                        100%{transform: rotate(-10deg);}
+                        100%{transform: rotate(-8deg);}
                         
                     }
                 }

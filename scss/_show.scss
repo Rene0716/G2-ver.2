@@ -176,9 +176,129 @@
                             }
                         }
                     }
-                    .collect{
-                        width:15%;
-                    }
-                 
+//--------------------------- 新增的部分-----------------------------                    
+.collect{
+    width:15%;
+}
+// -----------------------會員登入的燈箱------------------------------
+.lightBox{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:2;
+    background-color: rgba(0,0,0,.2);
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
 
-                   
+#lightBox{
+    width:80%;
+    margin:auto;
+    padding:70px 50px;
+    
+    background-image: url('../img/cust/pumpkin.png');
+    background-image: linear-gradient(#ee5,#e99);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 90% 90%;
+    height:500px;
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    @include media(lg){
+        width:50%;
+        height:50%;
+        background-size:50%;
+        
+    }
+   
+    >.login_password{
+       width:90%;
+       align-self:flex-end;
+       padding-top:0px;
+       padding-bottom:20px;
+       margin:auto;
+       position:relative;
+       @include media(lg){
+           width:80%;
+           line-height: 30px;
+       }
+       
+       >.btnLoginCancel{
+           position:absolute;
+           top:-30px;
+           right:-20px;
+           @include media(lg){
+               right:110px;
+               top:-50px;
+           }
+       }
+       >.login_title{
+           text-align: center;
+           margin:20px auto;
+           color:#ed690f,;  
+       } 
+    
+       #mem_id, #mem_psw{
+           margin:0px auto;
+           border-radius:10px;
+           display: block;
+           padding-left:5px;
+           height:30px;
+           @include media(lg){
+               width:45%;
+           }
+       }
+       >#forget_psw{
+           display:flex;
+           width:45%;
+           justify-content: flex-end;
+           text-align: right;
+           margin:-5px auto;
+           color:#ddd;
+           text-decoration: underline;
+           @include media (lg){
+               width:45%;
+               text-align:center;
+           }
+       }
+           
+        >#btnLogin{
+             @include btnCase(100px,40px);
+            background-color: #0168b7;
+            color: #fff;
+            font-weight: 800;
+            display:flex;
+            width:50%;
+            margin:auto;
+            @include media(lg){
+                display:flex;
+                width:45%;
+            }
+            >p{
+                text-align:center;
+                margin:auto;
+            }
+        }
+            
+       
+       >.notmem{
+           display:flex;
+           justify-content: center;
+           margin:-5px 5px 5px 5px;
+           >span,a{
+                align-self: center;
+                height:20px;
+                margin:5px;
+                color:#ddd;
+           }
+           >#register{
+               text-decoration: underline;
+           }
+       }
+    }
+}

@@ -1984,6 +1984,183 @@ div[class$=_titlebox] > [class$=_title] {
   width: 15%;
 }
 
+.lightBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#lightBox {
+  width: 80%;
+  margin: auto;
+  padding: 70px 50px;
+  background-image: url("../img/cust/pumpkin.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ee5), to(#e99));
+  background-image: linear-gradient(#ee5, #e99);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% 90%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  #lightBox {
+    width: 50%;
+    height: 50%;
+    background-size: 50%;
+  }
+}
+
+#lightBox > .login_password {
+  width: 90%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  #lightBox > .login_password {
+    width: 80%;
+    line-height: 30px;
+  }
+}
+
+#lightBox > .login_password > .btnLoginCancel {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+}
+
+@media (min-width: 768px) {
+  #lightBox > .login_password > .btnLoginCancel {
+    right: 110px;
+    top: -50px;
+  }
+}
+
+#lightBox > .login_password > .login_title {
+  text-align: center;
+  margin: 20px auto;
+  color: #ed690f;
+}
+
+#lightBox > .login_password #mem_id, #lightBox > .login_password #mem_psw {
+  margin: 0px auto;
+  border-radius: 10px;
+  display: block;
+  padding-left: 5px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  #lightBox > .login_password #mem_id, #lightBox > .login_password #mem_psw {
+    width: 45%;
+  }
+}
+
+#lightBox > .login_password > #forget_psw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  margin: -5px auto;
+  color: #ddd;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  #lightBox > .login_password > #forget_psw {
+    width: 45%;
+    text-align: center;
+  }
+}
+
+#lightBox > .login_password > #btnLogin {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #0168b7;
+  color: #fff;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+
+#lightBox > .login_password > #btnLogin:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  #lightBox > .login_password > #btnLogin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 45%;
+  }
+}
+
+#lightBox > .login_password > #btnLogin > p {
+  text-align: center;
+  margin: auto;
+}
+
+#lightBox > .login_password > .notmem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: -5px 5px 5px 5px;
+}
+
+#lightBox > .login_password > .notmem > span, #lightBox > .login_password > .notmem a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 20px;
+  margin: 5px;
+  color: #ddd;
+}
+
+#lightBox > .login_password > .notmem > #register {
+  text-decoration: underline;
+}
+
 .prod_normal {
   margin: auto;
   padding-top: 50px;
@@ -2134,8 +2311,8 @@ div[class$=_titlebox] > [class$=_title] {
 .body_bg .prod_champion > .container .champion_imgset > figure img {
   margin: auto;
   width: 80%;
-  -webkit-animation: championRotate .3s 10;
-          animation: championRotate .3s 10;
+  -webkit-animation: championRotate .5s 10;
+          animation: championRotate .5s 10;
 }
 
 @media (min-width: 768px) {
@@ -2146,8 +2323,8 @@ div[class$=_titlebox] > [class$=_title] {
 
 @-webkit-keyframes championRotate {
   0% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
   }
   25% {
     -webkit-transform: rotate(5deg);
@@ -2162,15 +2339,15 @@ div[class$=_titlebox] > [class$=_title] {
             transform: rotate(-5deg);
   }
   100% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
   }
 }
 
 @keyframes championRotate {
   0% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
   }
   25% {
     -webkit-transform: rotate(5deg);
@@ -2185,8 +2362,8 @@ div[class$=_titlebox] > [class$=_title] {
             transform: rotate(-5deg);
   }
   100% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
   }
 }
 
