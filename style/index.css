@@ -2049,6 +2049,7 @@ div[class$=_titlebox] > [class$=_title] {
   position: absolute;
   top: -30px;
   right: -20px;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

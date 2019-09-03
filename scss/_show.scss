@@ -232,6 +232,7 @@
            position:absolute;
            top:-30px;
            right:-20px;
+           cursor:pointer;
            @include media(lg){
                right:110px;
                top:-50px;
