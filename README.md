@@ -1,17 +1,8 @@
-# sixInOneProject
-專題說明文件=>有問題麻煩發issues
 # G2專題
 ---
 
 ## 時間進度流程
-1.剩下客製化區域整合
-客製化第一個合併到首頁
 
----
-
-2.JS動態表現
-每一頁js細項討論
-要使用哪些library
 
 ---
 
@@ -41,7 +32,7 @@ library js import=>會
 ******update:************
 1.prod_html:
   1.1 prod_prodset區塊加入slider動畫
-  1.2 prod_champion區塊加入canvas動畫(煙火效果),原先<img src="img/prod/groupchampion_bg.png" alt="團購冠軍">圖換掉
+  1.2 prod_champion區塊加入canvas動畫(煙火效果),原先圖換掉
   1.3 合計加入的link:
       style/slider.css
       style/owlcarousel.css
@@ -71,7 +62,15 @@ library js import=>會
    4.3 _show.scss 最下面加入燈箱
 5.未完成部分:
     5.1 點收藏愛心--秀會員登入燈箱---->9/2已完成
-    5.2 點加入購物車-秀已加入燈箱
+    5.2 點加入購物車-秀已加入燈箱----->9/3已完成
+    
+6. 9/3期中驗收待修改部分:
+    6.1 手機板---篩選器篩選方式待修改(不要用checkbox)
+    6.2 團購冠軍_煙火動畫待修正
+    6.3 團購冠軍圖的rotate動畫怪怪的(待修正)
+    6.4 團購冠軍動畫做完,字再跳出來(待修正)
+    6.5 團購冠軍圖比例需放大
+   
     
     
     
