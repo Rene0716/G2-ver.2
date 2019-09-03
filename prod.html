@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="style/slider.css">
   <link rel="stylesheet" href="style/owl.carousel.css"></link>
- <link rel="stylesheet" href="style/owl.theme.default.css">
-  
+  <link rel="stylesheet" href="style/owl.theme.default.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.6.1/animate.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/826a7e3dce.js" />
   <title>產品顯示頁面</title>
 
@@ -65,7 +66,7 @@
         <!-- <img src="img/prod/groupchampion_bg.png" alt="團購冠軍"> -->
         <figure>
           <figcaption>OOXX派</figcaption>
-          <a href="#"><img src="img/prod/pie_mucha.png"></a>
+          <a href="javascript:void(0)"><img src="img/prod/pie_mucha.png" ></a>
         </figure>
       </div>
     
@@ -95,17 +96,7 @@
           </div>
       </div>
   </section>
-<!------------- 點加入購物車的alert box-------------- -->
-<section class='alertBox'style="display:none;">
-  <div class="container">
-      <div id="alertBox" >	
-        <img src="img/index/shop_2.png" alt="" class='alert_bg'>
-        <div class="alert_txt">
-            <p>已成功加入購物車囉~~</p>
-        </div>      
-      </div>
-  </div>
-</section>
+
 <!-- ------------------------------------------------ -->
   <section class="prod_normal">
     <div class="container">
@@ -553,10 +544,14 @@
       </div>
     </div>
   </footer>
-  
   <script src="js/menu.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+
+<!-- for IE support -->
+<script src="path/to/es6-promise/promise.min.js"></script>
   <script src="js/collect.js"></script>
   <script src="js/lightbox.js"></script>
   <script src="js/alertbox.js"></script>
