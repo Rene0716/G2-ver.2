@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2{
+            background-image: url(red-bean.png);
+            background-size: center center;
+        }
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .flavor,.base,.deco,.ingredient{
+            border:solid 1px black;
+            width:50%;
+        }
+        p{
+            background-color: #ff0;
+            padding:20px 5px;
+        }
+        .filterBox{
+            height:30px;
+        }
+    
+    </style>
+</head>
+<body>
+   <div>
+       <div>filter header</div>
+       <div>
+            <ul class='flavor'><p id='aa'>口味>></p>
+              <li class='filterBox'>甜蜜蜜</li>
+              <li class='filterBox'>養生</li>
+              <li class='filterBox'>鹹派</li>
+            </ul>
+            <ul class='base'>基底>>
+              <li class='filterBox'>竹炭</li>
+              <li class='filterBox'>抹茶</li>
+              <li class='filterBox'>南瓜</li>
+            </ul>
+            <ul class='ingredient'>配料>>
+                <li class='filterBox'>紅豆</li>
+                <li class='filterBox'>瓜子</li>
+                <li class='filterBox'>蛋黃</li>
+                <li class='filterBox'>豆沙</li>
+                <li class='filterBox'>鳳梨餡</li>
+                <li class='filterBox'>火腿</li>
+            </ul>
+            <ul class='deco'>裝飾品>>
+                <li class='filterBox'>手指餅乾</li>
+                <li class='filterBox'>眼珠巧克力</li>
+                <li class='filterBox'>蟲蟲軟糖</li>
+            </ul>
+        </div>
+       <li>filter footer</li>
+   </div>
+   <script>
+       function doFirst(){
+           let flavor=document.getElementById('aa');
+           aa.click=hide;
+           
+
+
+       }
+
+
+
+
+
+       window.addEventListener('load',doFirst);
+   
+   
+   </script>
+</body>
+</html>
