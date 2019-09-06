@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        h2{
-            background-image: url(red-bean.png);
-            background-size: center center;
-        }
         *{
             margin:0;
             padding:0;
@@ -18,32 +14,95 @@
         .flavor,.base,.deco,.ingredient{
             border:solid 1px black;
             width:50%;
+            
+            
+            
         }
+        
         p{
             background-color: #ff0;
             padding:20px 5px;
+            position:relative;
         }
+        #flavor>img, #base>img, #ingredient>img, #deco>img{
+            width:30px;
+            height:30px;
+            position:absolute;
+            right:10px;
+            top:20px;
+        }
+        
         .filterBox{
             height:30px;
+            display:none;
         }
+        .show{
+            display:block;
+        }
+        li{
+            border:dashed 1px #999; 
+            
+        }
+        .filterGroup{
+            
+            margin:auto 50px;
+            overflow-y: scroll;
+            padding:50px; 
+            /* background-color: #fa9; */
+            
+        }
+        .rotate{
+            transform: rotate(-90deg);
+        }
+        /* li:hover{
+            background-color: #fa0;
+        } */
+        .toggleColor{
+            background: #ccc;
+        }
+        .filterBtn{
+            display:flex;
+            width:50%;
+            justify-content: space-evenly;
+            padding:10px;
+
+        }
+        .confirmBtn{
+            border: solid 1px red;
+            background-color: #fa0;
+            width:50px;
+            padding:10px auto;
+
+        }
+   
+       
     
     </style>
 </head>
 <body>
-   <div>
-       <div>filter header</div>
+   <div class='filterGroup'>
+       <div>篩選器 <span>取消</span></div>
        <div>
-            <ul class='flavor'><p id='aa'>口味>></p>
+            <ul class='flavor'>
+                <p id='flavor'>口味
+                    <img src="red-bean.png" alt="">
+                </p>
               <li class='filterBox'>甜蜜蜜</li>
               <li class='filterBox'>養生</li>
               <li class='filterBox'>鹹派</li>
             </ul>
-            <ul class='base'>基底>>
+            <ul class='base'>
+              <p id='base'>基底
+                    <img src="red-bean.png" alt="">
+              </p>
               <li class='filterBox'>竹炭</li>
               <li class='filterBox'>抹茶</li>
               <li class='filterBox'>南瓜</li>
             </ul>
-            <ul class='ingredient'>配料>>
+            <ul class='ingredient'>
+                <p id='ingredient'>配料
+                    <img src="red-bean.png" alt="">
+                </p>
                 <li class='filterBox'>紅豆</li>
                 <li class='filterBox'>瓜子</li>
                 <li class='filterBox'>蛋黃</li>
@@ -51,24 +110,88 @@
                 <li class='filterBox'>鳳梨餡</li>
                 <li class='filterBox'>火腿</li>
             </ul>
-            <ul class='deco'>裝飾品>>
+            <ul class='deco'>
+                <p id='deco'>裝飾品
+                    <img src="red-bean.png" alt="">
+                </p>
                 <li class='filterBox'>手指餅乾</li>
                 <li class='filterBox'>眼珠巧克力</li>
                 <li class='filterBox'>蟲蟲軟糖</li>
             </ul>
         </div>
-       <li>filter footer</li>
+       <div class='filterBtn'>
+           <div class='cancelBtn'>取消</div>
+           <div class='confirmBtn'>套用</div>
+       </div>
    </div>
    <script>
        function doFirst(){
-           let flavor=document.getElementById('aa');
-           aa.click=hide;
-           
+           let flavor=document.getElementById('flavor');
+           let base=document.getElementById('base');
+           let ingredient=document.getElementById('ingredient');
+           let deco=document.getElementById('deco');
+           flavor.onclick=showFlavor;
+           base.onclick=showBase;
+           ingredient.onclick=showIngredient;
+           deco.onclick=showDeco;
 
 
        }
 
+       function showFlavor(){
+           for(i=0;i<3;i++){
+                document.querySelectorAll('.flavor li')[i].classList.toggle('show');
+                document.getElementsByTagName('img')[0].classList.toggle('rotate');
+                document.querySelectorAll('.flavor li')[i].onclick=changeColor;
+           }
+           function changeColor(e){
+              e.target.classList.toggle('toggleColor');
+           }
+           
+       }
 
+
+       function showBase(){
+
+           for(i=0;i<3;i++){
+                document.querySelectorAll('.base li')[i].classList.toggle('show');
+                document.getElementsByTagName('img')[1].classList.toggle('rotate');
+                document.querySelectorAll('.base li')[i].onclick=changeColor;
+           }
+           console.log(document.getElementsByTagName('img')[1]);
+           function changeColor(e){
+              e.target.classList.toggle('toggleColor');
+           }
+
+           
+       }
+       
+
+       function showIngredient(){
+           for(i=0;i<6;i++){
+                document.querySelectorAll('.ingredient li')[i].classList.toggle('show');
+                document.getElementsByTagName('img')[2].classList.toggle('rotate');
+                
+                document.querySelectorAll('.ingredient li')[i].onclick=changeColor;
+           }
+           console.log(document.getElementsByTagName('img'));
+           function changeColor(e){
+              e.target.classList.toggle('toggleColor');
+           }
+       }
+
+       function showDeco(){
+           for(i=0;i<3;i++){
+                document.querySelectorAll('.deco li')[i].classList.toggle('show');
+                document.getElementsByTagName('img')[3].classList.toggle('rotate');
+                document.querySelectorAll('.deco li')[i].onclick=changeColor;
+           }
+           function changeColor(e){
+              e.target.classList.toggle('toggleColor');
+           }
+       }
+       
+       
 
 
 
